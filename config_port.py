@@ -23,8 +23,8 @@ try:
         vlan = 1
         commands = [
             f'ip dhcp pool {vlan_list[vlan]}',
-            f'network 192.168.{vlan_list[vlan]}.0 255.255.255.0'
-            f'default-router 192.168.{vlan_list[vlan]}.1'
+            f'network 192.168.{vlan_list[vlan]}.0 255.255.255.0',
+            f'default-router 192.168.{vlan_list[vlan]}.1',
             'dns-server 8.88.8',
             f'int {port}',
             'switchport mode access',
