@@ -11,6 +11,7 @@ cisco_device = {
 
 port_list = ['eth1/0','eth1/1','eth1/2','eth1/3']
 vlan_list = [11,12,13,14,15]
+vlan = 1
 
 try:
     net_connect = ConnectHandler(**cisco_device)
@@ -20,7 +21,6 @@ try:
 
 
     for port in port_list:
-        vlan = 1
         commands = [
             f'ip dhcp pool {vlan_list[vlan]}',
             f'network 192.168.{vlan_list[vlan]}.0 255.255.255.0',
