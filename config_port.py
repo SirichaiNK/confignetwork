@@ -29,7 +29,6 @@ try:
             f'int {port}',
             'switchport mode access',
             f'switchport access vlan {vlan_list[vlan]}',
-            f'ip addr 192.168.{vlan_list[vlan]}.1 255.255.255.0',
             'no sh',
         ]
         vlan += 1
