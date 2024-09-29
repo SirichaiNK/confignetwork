@@ -29,9 +29,9 @@ try:
             'no sh',
             'end'
         ]
+        output = net_connect.send_config_set(commands)
+        print(output)
 
-    # ส่งคำสั่งทั้งหมดทีเดียว
-    output = net_connect.send_config_set(commands)
 
     # ปิดการเชื่อมต่อ
     net_connect.disconnect()
