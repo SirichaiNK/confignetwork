@@ -23,10 +23,11 @@ try:
     for vlan in vlan_list:
         commands = [
             f'vlan {vlan}',
-            f'vlan {input('vlan name :')}',
+            #f'vlan {input('vlan name :')}',
             f'int vlan {vlan}',
             f'ip addr 192.168.{vlan}.1 255.255.255.0',
             'no sh',
+            'end'
         ]
 
     # ส่งคำสั่งทั้งหมดทีเดียว
