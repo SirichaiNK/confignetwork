@@ -25,6 +25,8 @@ try:
             f'dns-server 2001:4860:4860::8888',
             'domain-name testnet.com',
             f'interface vlan {vlan}'
+            f'ipv6 address 2001:DB8:{vlan}::1/64',
+            'ipv6 enable',
             f'ipv6 dhcp server VLAN{vlan}_IPV6_POOL'
             'ipv6 nd managed-config-flag'
             'ipv6 nd other-config-flag'
