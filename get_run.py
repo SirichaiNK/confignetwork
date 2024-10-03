@@ -3,18 +3,17 @@ from netmiko import ConnectHandler, NetMikoTimeoutException, NetMikoAuthenticati
 
 SW1 = {
     'device_type': 'cisco_ios',  
-    'host': '192.168.1.1',       
+    'host': '192.168.99.1',       
     'username': 'admin',         
-    'password': '040745', 
-    'secret': '7538',     
+    'password': '6410110503', 
+    'secret': '12345',  
 }
 
 SW2 = {
     'device_type': 'cisco_ios',  
-    'host': '192.168.11.1',       
     'username': 'admin',         
-    'password': '040745', 
-    'secret': '7538',     
+    'password': '6410110503', 
+    'secret': '12345',   
 }
 
 Switch_list = [SW1, SW2]
