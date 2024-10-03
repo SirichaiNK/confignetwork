@@ -44,11 +44,15 @@ for i in range(len(Switch_list)):
                 f'int {f'SW{i+1}_ports'[n]}',
                 f'switchport mode access',
                 f'switchport access vlan {vlan}',
-                'no sh'
+                'no sh',
+                'end'
             ]
             n += 1
             output = net_connect.send_config_set(commands)
+
             print(output)
+        save = net_connect.send_command('write memory')
+        print(save)
         net_connect.disconnect()
 
     except NetMikoTimeoutException:
