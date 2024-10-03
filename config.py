@@ -41,7 +41,7 @@ for i in range(len(Switch_list)):
                 f'ip addr 192.168.{vlan}.1 255.255.255.0',
                 'no sh',
                 'exit',
-                f'int {f'SW{i+1}_ports'[n]}',
+                f'int {config_data[f'SW{i+1}_ports'][n]}',
                 f'switchport mode access',
                 f'switchport access vlan {vlan}',
                 'no sh',
